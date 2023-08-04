@@ -198,8 +198,8 @@ export default function NewYoutubeform2() {
 const Container = styled.div`
  display: flex;
  flex-direction: column;
- width: 100vw;
- height: 100vh;
+ // width: 100vw;
+ // height: 100vh;
  align-items: center;
  justify-content: flex-start;
  background-color: #e6a4a4;

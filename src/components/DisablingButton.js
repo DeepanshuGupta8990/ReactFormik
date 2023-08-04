@@ -6,7 +6,7 @@ import TextError from './TextError';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function FormWithManuallyTriggeringValidation() {
+export default function DisablingButton() {
   const toastOptions = {
     position: `${window.innerWidth > 1200 ? "top-right" : "top-center"}`,
     autoClose: "8000",
@@ -28,8 +28,10 @@ export default function FormWithManuallyTriggeringValidation() {
         phNumbers: ['']
     }
 
-    const onSubmit = (values)=>{
+    const onSubmit = (values,onSubmitProps)=>{
         console.log('submit form data',values)
+        onSubmitProps.setSubmitting(false)
+         toast.success("singup succesfully",toastOptions)
     }
 
     const validationSchema = Yup.object({
@@ -59,6 +61,8 @@ export default function FormWithManuallyTriggeringValidation() {
   return (
       <>
     <Container>
+        <h2>DisablingButtonForm</h2>
+        <p>When form submission in progress</p>
      <Formik
      initialValues={initialValues}  
      onSubmit={onSubmit}
@@ -208,7 +212,7 @@ export default function FormWithManuallyTriggeringValidation() {
       <button type='button' className='btnclass' onClick={()=>{formik.setTouched({
         name:true,email:true,channel:true,comments:true
       })}}>Visit fields</button>
-      <button type="submit" className={`${(formik.dirty && formik.isValid)?'btnclass':"btndisabled"}`}disabled={!(formik.dirty && formik.isValid)}>Submit</button>
+      <button type="submit" className={`${!formik.isSubmitting?'btnclass':"btndisabled"}`}disabled={formik.isSubmitting}>Submit</button>
     </Form>
             )
         }
@@ -224,13 +228,12 @@ export default function FormWithManuallyTriggeringValidation() {
 const Container = styled.div`
  display: flex;
  flex-direction: column;
- // width: 100vw;
- // height: 100vh;
+ /* width: 100vw;
+ height: 100vh; */
  align-items: center;
  justify-content: flex-start;
  background-color: #e6a4a4;
  overflow-x: hidden;
-
   form{
     margin-top: 10px;
     display: flex;
