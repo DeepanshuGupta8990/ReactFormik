@@ -6,6 +6,8 @@ import FormWithManuallyTriggeringValidation from './components/FormWithManuallyT
 import NewYoutubeform2 from './components/newYoutubeForm2';
 import DisablingButton from './components/DisablingButton';
 import { styled } from 'styled-components';
+import LoadingsavedData from './components/LoadingsavedData';
+import RestFormdata from './components/ResetFormData';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <NewYoutubeform2/>
      <FormWithManuallyTriggeringValidation/>
      <DisablingButton/>
+     <LoadingsavedData/>
+     <RestFormdata/>
     </Container>
   );
 }
@@ -26,6 +30,10 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 /* align-items: center; */
+flex-wrap: wrap;
+gap: 1rem;
+background-color: #e6a4a4;
+`
 flex-wrap: wrap;
 gap: 1rem;
 background-color: #e6a4a4;
