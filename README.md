@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Getting Started with Create React App - https://64cccad274696f77f34ba259--venerable-rugelach-bceec0.netlify.app/
+This repository contains a simple React application that demonstrates how to use Formik, a popular library for managing forms in React. The application consists of a form with various input fields and validation logic. The user can enter their details, and the form is validated before submitting the data.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technologies Used
+React: A JavaScript library for building user interfaces.
+Formik: A form library for React that simplifies form handling and validation.
+Yup: A JavaScript schema builder for form validation.
+Styled-components: A CSS-in-JS library for styling React components.
+How to Run the Application
+Clone the repository to your local machine:
 
-## Available Scripts
+bash
+Copy code
+git clone <repository-url>
+Navigate to the project folder:
 
-In the project directory, you can run:
+bash
+Copy code
+cd <project-folder>
+Install the required dependencies:
 
-### `npm start`
+bash
+Copy code
+npm install
+Start the development server:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+npm start
+The application will be accessible at http://localhost:3000 in your web browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Features
+The form includes various input fields, such as name, email, channel, address, social media profiles, and phone numbers.
+The form includes client-side validation using Formik and Yup. Validation rules are specified for each input field, and error messages are displayed for invalid inputs.
+The user can add and remove additional phone numbers using the "List of phone numbers" section.
+The form includes a custom validation function for the "Comments" field to demonstrate custom validation logic.
+The form includes buttons for submitting the form, resetting the form, and manually triggering validation for specific fields (currently commented out).
+Usage
+Start by filling out the form with your details. Observe how the validation works when you try to submit the form with missing or invalid data.
+Try entering different values in the fields to see how the validation rules are applied.
+Test the custom validation for the "Comments" field by leaving it empty and submitting the form.
+Experiment with adding and removing phone numbers using the "List of phone numbers" section.
+Additional Notes
+The form's initial values are provided in the initialValues object.
+The form can be initialized with saved values (provided in the savedValues object) using the "Load saved data" button (currently commented out).
+The onSubmit function is responsible for handling the form submission. It logs the form data to the console and displays a toast notification on successful submission.
+The form styling is managed using styled-components, providing a clean and responsive design.
+Conclusion
+This project showcases a basic implementation of a React form using Formik and Yup for validation. You can build upon this example to create more complex forms with additional features based on your specific requirements. Formik's rich set of features, along with Yup's powerful validation capabilities, make managing forms in React a much smoother experience. Happy coding!
